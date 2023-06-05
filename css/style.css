@@ -1,0 +1,51 @@
+.main_banner {
+    background-color: #F0EFEB;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.main_banner .container{
+    max-width: 1064px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    position: relative;
+}
+.main_banner .information{
+    max-width: 534px;
+}
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    color: #000000;
+    margin-bottom: 42px;
+    margin-top: 0;
+}
+.main_banner p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 26px;
+}
+.main_banner a{
+    background: #000000;
+    border: 1px solid #000000;
+    border-radius: 100px;
+    padding: 7px 23px 9px 23px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.main_banner .photo_container{
+    max-width: 599px;
+    position: absolute;
+    left: 593px;
+    top: -81px;
+}
