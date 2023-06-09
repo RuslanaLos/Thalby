@@ -49,3 +49,121 @@ h1{
     left: 593px;
     top: -81px;
 }
+.cards{
+    padding-top: 60px;
+    padding-bottom: 248px;
+}
+.cards .container{
+    max-width: 692px;
+    margin: auto;
+}
+.cards .h3_first{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 27px;
+}
+.cards .h3_second{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 52px;
+}
+.cards .p_first{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 47px;
+
+}
+.cards .p_second{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 88px;
+}
+.cards_container{
+    max-width: 1064px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.cards_container .card{
+    max-width: 315px;
+}
+.first_card{
+    margin-bottom: 27px;
+}
+.second_card{
+    margin-bottom: 20px;
+}
+.third_card{
+    margin-bottom: 19px;
+}
+.card .description{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    padding-bottom: 17px;
+    max-width: 164px;
+    margin: auto;
+}
+.card .price{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.card a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #000000;
+    display: block;
+    margin-bottom: 40px;
+}
+.owl-dots{
+    width: 1064px;
+    display: inline-flex;
+    justify-content: center;
+
+}
+.owl-carousel button.owl-dot{
+    height: 15px;
+    width: 15px;
+    background-color:  #D399FF;
+    border-radius: 50%;
+    margin:15px;
+}
+.owl-carousel .owl-stage{
+    display: flex;
+    justify-content: space-between;
+}
+.cards_container .owl-item{
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
+}
+
+
