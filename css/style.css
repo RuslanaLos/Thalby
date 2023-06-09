@@ -149,12 +149,13 @@ h1{
     justify-content: center;
 
 }
-.owl-carousel button.owl-dot{
+.owl-carousel .owl-dot span{
     height: 15px;
     width: 15px;
     background-color:  #D399FF;
     border-radius: 50%;
     margin:15px;
+    display: inline-block;
 }
 .owl-carousel .owl-stage{
     display: flex;
@@ -165,5 +166,6 @@ h1{
     justify-content: center;
     margin-right: 0;
 }
+
 
 
