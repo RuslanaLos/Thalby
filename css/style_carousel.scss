@@ -1,0 +1,29 @@
+$color_dots: #D399FF;
+$color_active_dot: #869791;
+.owl-dots{
+  width: 1064px;
+  display: inline-flex;
+  justify-content: center;
+
+}
+.owl-carousel .owl-dot span{
+  height: 15px;
+  width: 15px;
+  background-color: $color_dots;
+  border-radius: 50%;
+  margin:15px;
+  display: inline-block;
+}
+
+.owl-carousel .owl-dot.active span{
+  background-color: $color_active_dot;
+}
+.owl-carousel .owl-stage{
+  display: flex;
+  justify-content: space-between;
+}
+.cards_container .owl-item{
+  display: flex;
+  justify-content: center;
+  margin-right: 0;
+}

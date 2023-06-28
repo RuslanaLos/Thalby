@@ -1,0 +1,27 @@
+.owl-dots {
+  width: 1064px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.owl-carousel .owl-dot span {
+  height: 15px;
+  width: 15px;
+  background-color: #D399FF;
+  border-radius: 50%;
+  margin: 15px;
+  display: inline-block;
+}
+
+.owl-carousel .owl-stage {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards_container .owl-item {
+  display: flex;
+  justify-content: center;
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=style_carousel.css.map */
