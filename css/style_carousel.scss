@@ -1,10 +1,37 @@
 $color_dots: #D399FF;
 $color_active_dot: #869791;
-.owl-dots{
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+.owl-dots {
   width: 1064px;
   display: inline-flex;
   justify-content: center;
-
+  @include max-screen(1024px) {
+    max-width: 994px;
+  }
+  @include max-screen(992px) {
+    max-width: 962px;
+  }
+  @include max-screen(834px) {
+    max-width: 804px;
+  }
+  @include max-screen(820px) {
+    max-width: 790px;
+  }
+  @include max-screen(800px) {
+    max-width: 770px;
+  }
+  @include max-screen(768px) {
+    max-width: 738px;
+  }
+  @include max-screen(428px) {
+    max-width: 398px;
+  }
 }
 .owl-carousel .owl-dot span{
   height: 15px;

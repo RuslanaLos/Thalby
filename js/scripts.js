@@ -10,12 +10,16 @@ $(document).ready(function(){
 
         responsive:{
             0:{
-                items:1
+                items:1,
+                autoplay: true,
+                dots: false,
+            },
+            360:{
+                items:2,
+                autoplay: true,
+                dots: false,
             },
             768:{
-                items:2
-            },
-            1100:{
                 items:3
             }
         }

@@ -1,31 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import "style_carousel";
+$header_text: #1C1B1B;
+$main_banner_bg: #F0EFEB;
+$main_text_color: #000000;
+$border_color: #000;
+$ft_bg_color: black;
+$white_color: #FFFFFF;
+$bg_cards_1:rgba(204, 204, 204, 0.30);
+$bg_cards_2:rgba(204, 204, 204, 0.60);
+$bg_interviews: #F0F0F0;
+$form_color: #A0A0A0;
+$main_font: Roboto;
+$max_width: 1064px;
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
 
 header{
   padding: 7px 0;
-  position: relative;
   .container{
-    max-width: 1064px;
+    max-width: $max_width;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include max-screen(1024px){
+      max-width: 994px;
+    }
+    @include max-screen(992px){
+      max-width: 962px;
+    }
+    @include max-screen(834px){
+      max-width: 804px;
+    }
+    @include max-screen(820px){
+      max-width: 790px;
+    }
+    @include max-screen(800px){
+      max-width: 770px;
+    }
+    @include max-screen(768px){
+      max-width: 738px;
+    }
+    @include max-screen(428px){
+      max-width: 398px;
+    }
+    @include max-screen(414px){
+      max-width: 384px;
+    }
+    @include max-screen(390px){
+      max-width: 360px;
+    }
+    @include max-screen(375px){
+      max-width: 345px;
+    }
+    @include max-screen(360px){
+      max-width: 330px;
+    }
+    @include max-screen(320px){
+      max-width: 290px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     .nav{
       ul{
         display: flex;
         align-items: center;
+        @include max-screen(428px){
+          display: block;
+        }
         li{
           margin-left: 28px;
-          &:first-of-type{
+          @include max-screen(834px){
+            margin-left: 10px;
+          }
+          @include max-screen(375px){
             margin-left: 0;
           }
+          &:first-of-type{
+            margin-left: 0;
+            @include max-screen(428px){
+              margin-left: 10px;
+            }
+            @include max-screen(375px){
+              margin-left: 0;
+            }
+          }
           a{
-            color: #1C1B1B;
+            color: $header_text;
             font-size: 16px;
-            font-family: Roboto, sans-serif;
+            font-family: $main_font, sans-serif;
             font-weight: 700;
             line-height: 26.4px;
             text-decoration: none;
+            @include max-screen(768px){
+              font-size: 12px;
+            }
+            @include max-screen(320px){
+              font-size: 10px;
+            }
           }
         }
       }
@@ -34,17 +111,31 @@ header{
       position: absolute;
       top: 16px;
       left: calc(50% - 40px);
+      @include max-screen(428px){
+        top: 45px;
+      }
     }
     .icons{
       ul{
         display: flex;
         align-items: center;
+        @include max-screen(428px){
+          display: block;
+        }
         li{
+          @include max-screen(428px){
+            &:nth-child(1){
+              margin-left: 24px;
+            }
+          }
           &:nth-child(2){
             margin-left: 15px;
           }
           &:nth-child(3){
             margin-left: 7px;
+            @include max-screen(428px){
+              margin-left: 19px;
+            }
           }
         }
       }
@@ -52,46 +143,115 @@ header{
   }
 }
 .main_banner{
-  background-color: #F0EFEB;
+  background-color: $main_banner_bg;
   padding-top: 90px;
   padding-bottom: 90px;
+  @include max-screen(428px){
+    padding: 45px 0;
+  }
+  @include max-screen(375px){
+    padding: 22px 0;
+  }
   .container{
-    max-width: 1064px;
+    max-width: $max_width;
     margin: auto;
     display: flex;
     justify-content: flex-start;
     align-items: start;
     position: relative;
+    @include max-screen(1024px){
+      max-width: 994px;
+    }
+    @include max-screen(992px){
+      max-width: 962px;
+    }
+    @include max-screen(834px){
+      max-width: 804px;
+    }
+    @include max-screen(820px){
+      max-width: 790px;
+    }
+    @include max-screen(800px){
+      max-width: 770px;
+    }
+    @include max-screen(768px){
+      max-width: 738px;
+    }
+    @include max-screen(428px){
+      max-width: 398px;
+      display: block;
+    }
+    @include max-screen(414px){
+      max-width: 384px;
+    }
+    @include max-screen(390px){
+      max-width: 360px;
+    }
+    @include max-screen(375px){
+      max-width: 345px;
+    }
+    @include max-screen(360px){
+      max-width: 330px;
+    }
+    @include max-screen(320px){
+      max-width: 290px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     .information{
       max-width: 534px;
       h1{
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font, sans-serif;
         font-weight: 700;
         font-size: 60px;
         line-height: 70px;
-        color: #000000;
+        color: $main_text_color;
         margin-bottom: 42px;
         margin-top: 0;
+        @include max-screen(834px){
+          font-size: 50px;
+          line-height: 50px;
+        }
+        @include max-screen(428px){
+          font-size: 30px;
+          line-height: 30px;
+          margin-bottom: 21px;
+        }
+        @include max-screen(375px){
+          font-size: 25px;
+          margin-bottom: 15px;
+        }
       }
       p{
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font, sans-serif;
         font-weight: 400;
         font-size: 24px;
         line-height: 28px;
-        color: #000000;
+        color: $main_text_color;
         margin-bottom: 26px;
+        @include max-screen(428px){
+          font-size: 20px;
+        }
+        @include max-screen(375px){
+          font-size: 15px;
+          line-height: 20px;
+        }
       }
       a{
-        background: #000000;
-        border: 1px solid #000000;
+        background: $main_text_color;
+        border: 1px solid $border_color;
         border-radius: 100px;
         padding: 7px 23px 9px 23px;
         text-decoration: none;
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font, sans-serif;
         font-weight: 400;
         font-size: 17px;
         line-height: 20px;
-        color: #FFFFFF;
+        color: $white_color;
+        @include max-screen(375px){
+          font-size: 13px;
+        }
       }
     }
     .photo_container{
@@ -99,61 +259,189 @@ header{
       position: absolute;
       left: 593px;
       top: -81px;
+      @include max-screen(1024px){
+        top: -30px;
+      }
+      @include max-screen(992px){
+        top: 0;
+      }
+      @include max-screen(834px){
+        position: static;
+      }
+      @include max-screen(428px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 15px;
+      }
+      img{
+        @include max-screen(1024px){
+          width: 100%;
+          box-sizing: border-box;
+        }
+        @include max-screen(428px){
+          width: 298px;
+          align-items: center;
+          justify-content: center;
+        }
+        @include max-screen(280px){
+          width: 250px;
+        }
+      }
     }
   }
 }
 .cards{
   padding-top: 60px;
   padding-bottom: 248px;
+  @include max-screen(834px){
+    padding-bottom: 100px;
+  }
+  @include max-screen(428px){
+    padding: 50px 0;
+  }
+  @include max-screen(375px){
+    padding: 25px 0;
+  }
   .container{
     max-width: 692px;
     margin: auto;
+    @include max-screen(820px){
+      max-width: 500px;
+    }
+    @include max-screen(428px){
+      max-width: 300px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     .h3_first{
-      font-family: 'Roboto',sans-serif;
+      font-family: $main_font,sans-serif;
       font-weight: 700;
       font-size: 36px;
       line-height: 42px;
       text-align: center;
-      color: #000000;
+      color: $main_text_color;
       margin-bottom: 27px;
+      @include max-screen(428px){
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+      @include max-screen(375px){
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 15px;
+      }
     }
     .p_first{
-      font-family: 'Roboto',sans-serif;
+      font-family: $main_font,sans-serif;
       font-weight: 400;
       font-size: 20px;
       line-height: 23px;
       text-align: center;
-      color: #000000;
+      color: $main_text_color;
       margin-bottom: 47px;
+      @include max-screen(428px){
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 20px;
+      }
     }
     .p_second{
-      font-family: 'Roboto',sans-serif;
+      font-family: $main_font,sans-serif;
       font-weight: 400;
       font-size: 20px;
       line-height: 23px;
       text-align: center;
-      color: #000000;
+      color: $main_text_color;
       margin-bottom: 88px;
+      @include max-screen(428px){
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 20px;
+      }
     }
     .h3_second{
-      font-family: 'Roboto',sans-serif;
+      font-family: $main_font,sans-serif;
       font-weight: 700;
       font-size: 36px;
       line-height: 42px;
       text-align: center;
-      color: #000000;
+      color: $main_text_color;
       margin-bottom: 52px;
+      @include max-screen(428px){
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+      @include max-screen(375px){
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 15px;
+      }
     }
   }
   .cards_container{
-    max-width: 1064px;
+    max-width: $max_width;
     margin: auto;
+    @include max-screen(1024px){
+      max-width: 994px;
+    }
+    @include max-screen(992px){
+      max-width: 962px;
+    }
+    @include max-screen(834px){
+      max-width: 804px;
+    }
+    @include max-screen(820px){
+      max-width: 790px;
+    }
+    @include max-screen(800px){
+      max-width: 770px;
+    }
+    @include max-screen(768px){
+      max-width: 738px;
+    }
+    @include max-screen(428px){
+      max-width: 398px;
+    }
+    @include max-screen(414px){
+      max-width: 384px;
+    }
+    @include max-screen(390px){
+      max-width: 360px;
+    }
+    @include max-screen(375px){
+      max-width: 345px;
+    }
+    @include max-screen(360px){
+      max-width: 330px;
+    }
+    @include max-screen(320px){
+      max-width: 290px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     .card{
       max-width: 314px;
+      @include max-screen(834px){
+        max-width: 250px;
+      }
+      @include max-screen(768px){
+        max-width: 200px;
+      }
+      @include max-screen(428px){
+        max-width: 150px;
+      }
       .first_card{
         margin-bottom: 27px;
         width: 100%;
         display: block;
+        @include max-screen(428px){
+          margin-bottom: 20px;
+        }
       }
       .second_card{
         margin-bottom: 20px;
@@ -166,35 +454,45 @@ header{
         display: block;
       }
       .description {
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font, sans-serif;
         font-weight: 700;
         font-size: 17px;
         line-height: 20px;
         text-align: center;
-        color: #000000;
+        color: $main_text_color;
         padding-bottom: 17px;
         max-width: 164px;
         margin: auto;
+        @include max-screen(375px){
+          font-size: 13px;
+        }
       }
       .price{
-        font-family: 'Roboto',sans-serif;
+        font-family: $main_font,sans-serif;
         font-weight: 400;
         font-size: 17px;
         line-height: 20px;
         text-align: center;
-        color: #000000;
+        color: $main_text_color;
         margin-bottom: 10px;
+        @include max-screen(375px){
+          font-size: 13px;
+        }
       }
       a{
-        font-family: 'Roboto', sans-serif;
+        font-family: $main_font, sans-serif;
         font-weight: 700;
         font-size: 17px;
         line-height: 20px;
         text-align: center;
         text-decoration-line: underline;
-        color: #000000;
+        color: $main_text_color;
         display: block;
         margin-bottom: 40px;
+        @include max-screen(375px){
+          font-size: 13px;
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -202,14 +500,67 @@ header{
 .cards_description{
   padding-top: 76px;
   padding-bottom: 51px;
-  background-color: rgba(204, 204, 204, 0.30);
+  background-color: $bg_cards_1;
+  @include max-screen(834px){
+    padding: 43px 0;
+  }
+  @include max-screen(428px){
+    padding: 21px 0;
+  }
   .container{
-    max-width: 1064px;
+    max-width: $max_width;
     margin: auto;
     display: flex;
+    @include max-screen(1024px){
+      max-width: 994px;
+    }
+    @include max-screen(992px){
+      max-width: 962px;
+    }
+    @include max-screen(834px){
+      max-width: 804px;
+    }
+    @include max-screen(820px){
+      max-width: 790px;
+    }
+    @include max-screen(800px){
+      max-width: 770px;
+    }
+    @include max-screen(768px){
+      max-width: 738px;
+    }
+    @include max-screen(428px){
+      max-width: 398px;
+      display: block;
+    }
+    @include max-screen(414px){
+      max-width: 384px;
+    }
+    @include max-screen(390px){
+      max-width: 360px;
+    }
+    @include max-screen(375px){
+      max-width: 345px;
+    }
+    @include max-screen(360px){
+      max-width: 330px;
+    }
+    @include max-screen(320px){
+      max-width: 290px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     .photo_card{
       max-width: 385px;
       margin-right: 50px;
+      @include max-screen(834px){
+        padding: 43px 0;
+      }
+      @include max-screen(428px){
+        margin: auto;
+        padding: 0 40px;
+      }
       img{
         width: 100%;
         display: block;
@@ -218,28 +569,79 @@ header{
     article{
       max-width: 498px;
       padding: 63px 0;
+      @include max-screen(834px){
+        padding: 43px 0;
+      }
+      @include max-screen(768px){
+        max-width: 450px;
+      }
+      @include max-screen(428px){
+        max-width: 398px;
+        text-align: center;
+      }
+      @include max-screen(375px){
+        padding: 33px 0;
+      }
+
       h3{
-        color: #000;
+        color: $main_text_color;
         font-size: 36px;
-        font-family: Roboto,sans-serif;
+        font-family: $main_font,sans-serif;
         font-weight: 700;
         margin-bottom: 31px;
         line-height: 42px;
+        @include max-screen(834px){
+          font-size: 30px;
+          margin-bottom: 25px;
+        }
+        @include max-screen(768px){
+          font-size: 25px;
+          margin-bottom: 20px;
+        }
+        @include max-screen(428px){
+          font-size: 25px;
+          margin-bottom: 15px;
+          line-height: 21px;
+        }
+        @include max-screen(375px){
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
       }
       p{
-        color: #000;
+        color: $main_text_color;
         font-size: 36px;
-        font-family: Roboto,sans-serif;
+        font-family: $main_font,sans-serif;
         margin-bottom: 40px;
         line-height: 43px;
+        @include max-screen(834px){
+          font-size: 30px;
+          margin-bottom: 25px;
+        }
+        @include max-screen(768px){
+          font-size: 25px;
+          margin-bottom: 20px;
+          line-height: 35px;
+        }
+        @include max-screen(428px){
+          font-size: 20px;
+          margin-bottom: 10px;
+          line-height: 25px;
+        }
+        @include max-screen(375px){
+          font-size: 15px;
+        }
       }
       a{
-        color: #000;
+        color: $main_text_color;
         font-size: 17px;
-        font-family: Roboto,sans-serif;
+        font-family: $main_font,sans-serif;
         font-weight: 700;
         text-decoration-line: underline;
         line-height: 20px;
+        @include max-screen(375px){
+          font-size: 13px;
+        }
       }
     }
   }
@@ -247,15 +649,70 @@ header{
 .cards_description_2{
   padding-top: 76px;
   padding-bottom: 51px;
-  background-color: rgba(204, 204, 204, 0.60);
+  background-color: $bg_cards_2;
+  @include max-screen(834px){
+    padding: 43px 0;
+  }
+  @include max-screen(428px){
+    padding: 21px 0;
+  }
   .container{
-    max-width: 1064px;
+    max-width: $max_width;
     margin: auto;
     display: flex;
     justify-content: flex-end;
+    @include max-screen(1024px){
+      max-width: 994px;
+    }
+    @include max-screen(992px){
+      max-width: 962px;
+    }
+    @include max-screen(834px){
+      max-width: 804px;
+    }
+    @include max-screen(820px){
+      max-width: 790px;
+    }
+    @include max-screen(800px){
+      max-width: 770px;
+    }
+    @include max-screen(768px){
+      max-width: 738px;
+    }
+    @include max-screen(428px){
+      max-width: 398px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include max-screen(414px){
+      max-width: 384px;
+    }
+    @include max-screen(390px){
+      max-width: 360px;
+    }
+    @include max-screen(375px){
+      max-width: 345px;
+    }
+    @include max-screen(360px){
+      max-width: 330px;
+    }
+    @include max-screen(320px){
+      max-width: 290px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     .photo_card{
       max-width: 385px;
       margin-left: 50px;
+      @include max-screen(834px){
+        padding: 43px 0;
+      }
+      @include max-screen(428px){
+        margin: auto;
+        padding: 0 40px;
+        order: 1;
+      }
       img{
         width: 100%;
         display: block;
@@ -265,28 +722,79 @@ header{
       max-width: 498px;
       padding: 63px 0;
       text-align: end;
+      @include max-screen(834px){
+        padding: 43px 0;
+      }
+      @include max-screen(768px){
+        max-width: 450px;
+      }
+      @include max-screen(428px){
+        max-width: 398px;
+        text-align: center;
+        order: 2;
+      }
+      @include max-screen(375px){
+        padding: 33px 0;
+      }
       h3{
-        color: #000;
+        color: $main_text_color;
         font-size: 36px;
-        font-family: Roboto,sans-serif;
+        font-family: $main_font,sans-serif;
         font-weight: 700;
         margin-bottom: 31px;
         line-height: 41px;
+        @include max-screen(834px){
+          font-size: 30px;
+          margin-bottom: 25px;
+        }
+        @include max-screen(768px){
+          font-size: 25px;
+          margin-bottom: 20px;
+        }
+        @include max-screen(428px){
+          font-size: 25px;
+          margin-bottom: 15px;
+          line-height: 21px;
+        }
+        @include max-screen(375px){
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
       }
       p{
-        color: #000;
+        color: $main_text_color;
         font-size: 36px;
-        font-family: Roboto,sans-serif;
+        font-family: $main_font,sans-serif;
         margin-bottom: 40px;
         line-height: 42px;
+        @include max-screen(834px){
+          font-size: 30px;
+          margin-bottom: 25px;
+        }
+        @include max-screen(768px){
+          font-size: 25px;
+          margin-bottom: 20px;
+          line-height: 35px;
+        }
+        @include max-screen(428px){
+          font-size: 20px;
+          margin-bottom: 10px;
+          line-height: 25px;
+        }
+        @include max-screen(375px){
+          font-size: 15px;
+        }
       }
       a{
-        color: #000;
+        color: $main_text_color;
         font-size: 17px;
-        font-family: Roboto,sans-serif;
+        font-family: $main_font,sans-serif;
         font-weight: 700;
         text-decoration-line: underline;
         line-height: 20px;
+        @include max-screen(375px){
+          font-size: 13px;
+        }
       }
     }
   }
@@ -294,16 +802,74 @@ header{
 .features{
   padding-top: 190px;
   padding-bottom: 52px;
+  @include max-screen(834px){
+    padding-top: 100px;
+    padding-bottom: 32px;
+  }
+  @include max-screen(428px){
+    padding: 32px 0;
+  }
   .container{
-    max-width: 1064px;
+    max-width: $max_width;
     margin: auto;
+    @include max-screen(1024px){
+      max-width: 994px;
+    }
+    @include max-screen(992px){
+      max-width: 962px;
+    }
+    @include max-screen(834px){
+      max-width: 804px;
+    }
+    @include max-screen(820px){
+      max-width: 790px;
+    }
+    @include max-screen(800px){
+      max-width: 770px;
+    }
+    @include max-screen(768px){
+      max-width: 738px;
+    }
+    @include max-screen(428px){
+      max-width: 398px;
+    }
+    @include max-screen(414px){
+      max-width: 384px;
+    }
+    @include max-screen(390px){
+      max-width: 360px;
+    }
+    @include max-screen(375px){
+      max-width: 345px;
+    }
+    @include max-screen(360px){
+      max-width: 330px;
+    }
+    @include max-screen(320px){
+      max-width: 290px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     h2{
-      color: #000;
+      color: $main_text_color;
       text-align: center;
       font-size: 36px;
-      font-family: Roboto, sans-serif;
+      font-family: $main_font, sans-serif;
       line-height: 42px;
       margin-bottom: 69px;
+      @include max-screen(768px){
+        font-size: 30px;
+        margin-bottom: 40px;
+      }
+      @include max-screen(428px){
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+      @include max-screen(375px){
+        font-size: 20px;
+        line-height: 25px;
+      }
     }
     .features_icons{
       max-width: inherit;
@@ -315,13 +881,45 @@ header{
         width: 340px;
         text-align: center;
         margin-bottom: 111px;
+        @include max-screen(1024px){
+          width: 300px;
+        }
+        @include max-screen(834px){
+          width: 250px;
+        }
+        @include max-screen(768px){
+          width: 220px;
+          margin-bottom: 55px;
+        }
+        @include max-screen(428px){
+          width: 190px;
+          margin-bottom: 35px;
+        }
+        @include max-screen(390px){
+          width: 150px;
+        }
+        @include max-screen(320px){
+          width: 130px;
+        }
+        @include max-screen(280px){
+          width: 120px;
+        }
         h3{
-          color: #000;
+          color: $main_text_color;
           text-align: center;
           font-size: 30px;
-          font-family: Roboto,sans-serif;
+          font-family: $main_font,sans-serif;
           font-weight: 700;
           margin-top: 26px;
+          @include max-screen(768px){
+            font-size: 20px;
+          }
+          @include max-screen(375px){
+            font-size: 15px;
+          }
+          @include max-screen(280px){
+            font-size: 10px;
+          }
         }
       }
       .icon_1{
@@ -332,6 +930,10 @@ header{
           height: 70px;
           border-radius: 35px;
           background: #21F7EC;
+          @include max-screen(768px){
+            width: 35px;
+            height: 35px;
+          }
         }
       }
       .icon_2{
@@ -342,6 +944,10 @@ header{
           height: 70px;
           border-radius: 35px;
           background: #33D3BC;
+          @include max-screen(768px){
+            width: 35px;
+            height: 35px;
+          }
         }
       }
       .icon_3{
@@ -352,6 +958,10 @@ header{
           height: 70px;
           border-radius: 35px;
           background: #18A5C6;
+          @include max-screen(768px){
+            width: 35px;
+            height: 35px;
+          }
         }
       }
       .icon_4{
@@ -362,6 +972,10 @@ header{
           height: 70px;
           border-radius: 35px;
           background: #D38F62;
+          @include max-screen(768px){
+            width: 35px;
+            height: 35px;
+          }
         }
       }
       .icon_5{
@@ -372,6 +986,10 @@ header{
           height: 70px;
           border-radius: 35px;
           background: #F94C43;
+          @include max-screen(768px){
+            width: 35px;
+            height: 35px;
+          }
         }
       }
       .icon_6{
@@ -382,6 +1000,10 @@ header{
           height: 70px;
           border-radius: 35px;
           background: #D399FF;
+          @include max-screen(768px){
+            width: 35px;
+            height: 35px;
+          }
         }
       }
     }
@@ -389,56 +1011,167 @@ header{
 }
 .interviews{
   padding-bottom: 52px;
-  background: linear-gradient(to bottom, white 44%, #F0F0F0 44%, #F0F0F0 100%);
+  background: linear-gradient(to bottom, $white_color 44%, $bg_interviews 44%, $bg_interviews 100%);
   .container{
-    max-width: 1064px;
+    max-width: $max_width;
     margin: auto;
+    @include max-screen(1024px){
+      max-width: 994px;
+    }
+    @include max-screen(992px){
+      max-width: 962px;
+    }
+    @include max-screen(834px){
+      max-width: 804px;
+    }
+    @include max-screen(820px){
+      max-width: 790px;
+    }
+    @include max-screen(800px){
+      max-width: 770px;
+    }
+    @include max-screen(768px){
+      max-width: 738px;
+    }
+    @include max-screen(428px){
+      max-width: 398px;
+    }
+    @include max-screen(414px){
+      max-width: 384px;
+    }
+    @include max-screen(390px){
+      max-width: 360px;
+    }
+    @include max-screen(375px){
+      max-width: 345px;
+    }
+    @include max-screen(360px){
+      max-width: 330px;
+    }
+    @include max-screen(320px){
+      max-width: 290px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     h3{
-      color: #000;
+      color: $main_text_color;
       text-align: center;
       font-size: 36px;
-      font-family: Roboto, sans-serif;
+      font-family: $main_font, sans-serif;
       font-weight: 700;
       line-height: 42px;
       margin-bottom: 102px;
+      @include max-screen(768px){
+        font-size: 25px;
+        margin-bottom: 80px;
+      }
+      @include max-screen(428px) {
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+      @include max-screen(390px){
+        font-size: 17px;
+        line-height: 25px;
+      }
     }
     .respondents{
       display: flex;
       justify-content: space-between;
       article{
         max-width: 288px;
+        @include max-screen(834px){
+          max-width: 250px;
+        }
+        @include max-screen(768px){
+          max-width: 220px;
+        }
+        @include max-screen(428px){
+          max-width: 130px;
+        }
+        @include max-screen(414px){
+          max-width: 120px;
+        }
+        @include max-screen(375px){
+          max-width: 100px;
+        }
+        @include max-screen(320px){
+          max-width: 90px;
+        }
+        @include max-screen(280px){
+          max-width: 80px;
+        }
         img{
           width: 100%;
           display: block;
           margin-bottom: 35px;
         }
         h5{
-          color: #000;
+          color: $main_text_color;
           text-align: center;
           font-size: 22px;
-          font-family: Roboto,sans-serif;
+          font-family: $main_font,sans-serif;
           font-weight: 700;
           letter-spacing: 0.6px;
           line-height: 26px;
           margin-bottom: 34px;
+          @include max-screen(768px){
+            font-size: 17px;
+            margin-bottom: 17px;
+          }
+          @include max-screen(428px){
+            font-size: 15px;
+            margin-bottom: 10px;
+          }
+          @include max-screen(390px){
+            font-size: 11px;
+            line-height: 15px;
+          }
+          @include max-screen(280px){
+            display: none;
+          }
         }
         p{
-          color: #000;
+          color: $main_text_color;
           text-align: center;
           font-size: 19px;
-          font-family: Roboto, sans-serif;
+          font-family: $main_font, sans-serif;
           line-height: 22px;
           margin-bottom: 44px;
+          @include max-screen(768px){
+            font-size: 13px;
+            margin-bottom: 22px;
+          }
+          @include max-screen(428px){
+            font-size: 10px;
+            margin-bottom: 10px;
+          }
+          @include max-screen(428px){
+            font-size: 8px;
+            margin-bottom: 10px;
+          }
+          @include max-screen(390px){
+            line-height: 15px;
+          }
+          @include max-screen(320px){
+            font-size: 11px;
+          }
+          @include max-screen(280px){
+            font-size: 12px;
+          }
         }
         a{
-          color: #000;
+          color: $main_text_color;
           text-align: center;
           font-size: 18px;
-          font-family: Roboto,sans-serif;
+          font-family: $main_font,sans-serif;
           font-weight: 700;
           text-decoration-line: underline;
           line-height: 21px;
           display: block;
+          @include max-screen(768px){
+            font-size: 12px;
+          }
         }
       }
     }
@@ -447,57 +1180,123 @@ header{
 .keep_in_touch{
   padding-top: 79px;
   padding-bottom: 88px;
+  @include max-screen(414px){
+    padding: 50px 0;
+  }
   .container{
     max-width: 498px;
     margin: 0 auto 26px;
+    @include max-screen(1024px){
+      max-width: 994px;
+    }
+    @include max-screen(992px){
+      max-width: 962px;
+    }
+    @include max-screen(834px){
+      max-width: 804px;
+    }
+    @include max-screen(820px){
+      max-width: 790px;
+    }
+    @include max-screen(800px){
+      max-width: 770px;
+    }
+    @include max-screen(768px){
+      max-width: 738px;
+    }
+    @include max-screen(428px){
+      max-width: 398px;
+    }
+    @include max-screen(414px){
+      max-width: 384px;
+    }
+    @include max-screen(390px){
+      max-width: 360px;
+    }
+    @include max-screen(375px){
+      max-width: 345px;
+    }
+    @include max-screen(360px){
+      max-width: 330px;
+    }
+    @include max-screen(320px){
+      max-width: 290px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     h3{
-      color: #000;
+      color: $main_text_color;
       text-align: center;
       font-size: 36px;
-      font-family: Roboto,sans-serif;
+      font-family: $main_font,sans-serif;
       font-weight: 700;
       line-height: 42px;
       margin-bottom: 9px;
+      @include max-screen(768px){
+        font-size: 26px;
+      }
+      @include max-screen(414px){
+        font-size: 20px;
+      }
     }
     p{
-      color: #000;
+      color: $main_text_color;
       text-align: center;
       font-size: 17px;
-      font-family: Roboto,sans-serif;
+      font-family: $main_font,sans-serif;
       font-weight: 700;
       line-height: 20px;
+      @include max-screen(390px){
+        font-size: 14px;
+      }
     }
   }
   .form_container{
     max-width: 366px;
     margin: auto;
+    @include max-screen(360px){
+      max-width: 330px;
+    }
+    @include max-screen(320px){
+      max-width: 290px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     .form_row{
       display: flex;
       justify-content: space-between;
       .first_name, .last_name{
         width: 153px;
-        border: 1px solid #000;
+        border: 1px solid $border_color;
         padding-top: 12px;
         padding-bottom: 11px;
         padding-left: 8px;
         margin-bottom: 18px;
-        color: #A0A0A0;
+        color: $form_color;
         font-size: 14px;
-        font-family: Roboto,sans-serif;
+        font-family: $main_font,sans-serif;
         line-height: 16px;
+        @include max-screen(360px){
+          width: 130px;
+        }
+        @include max-screen(280px){
+          max-width: 110px;
+        }
       }
     }
     .email{
       width: 100%;
       box-sizing: border-box;
-      border: 1px solid #000;
+      border: 1px solid $border_color;
       padding-top: 13px;
       padding-bottom: 10px;
       padding-left: 8px;
       margin-bottom: 16px;
-      color: #A0A0A0;
+      color: $form_color;
       font-size: 14px;
-      font-family: Roboto,sans-serif;
+      font-family: $main_font,sans-serif;
       line-height: 16px;
     }
     .subscribe{
@@ -505,13 +1304,13 @@ header{
       justify-content: center;
       button{
         border-radius: 100px;
-        border: 1px solid #000;
-        background: #000;
+        border: 1px solid $border_color;
+        background: $border_color;
         padding: 7px 23px 10px;
-        color: #FFF;
+        color: $white_color;
         text-align: center;
         font-size: 14px;
-        font-family: Roboto,sans-serif;
+        font-family: $main_font,sans-serif;
       }
     }
   }
@@ -519,68 +1318,178 @@ header{
 footer{
   padding-top: 51px;
   padding-bottom: 16px;
-  background-color: black;
+  background-color: $ft_bg_color;
+  @include max-screen(768px){
+    padding-top: 25px;
+  }
   .container{
-    max-width: 1064px;
+    max-width: $max_width;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    @include max-screen(1024px){
+      max-width: 994px;
+    }
+    @include max-screen(992px){
+      max-width: 962px;
+    }
+    @include max-screen(834px){
+      max-width: 804px;
+    }
+    @include max-screen(820px){
+      max-width: 790px;
+    }
+    @include max-screen(800px){
+      max-width: 770px;
+    }
+    @include max-screen(768px){
+      max-width: 738px;
+    }
+    @include max-screen(428px){
+      max-width: 398px;
+      display: block;
+    }
+    @include max-screen(414px){
+      max-width: 384px;
+    }
+    @include max-screen(390px){
+      max-width: 360px;
+    }
+    @include max-screen(375px){
+      max-width: 345px;
+    }
+    @include max-screen(360px){
+      max-width: 330px;
+    }
+    @include max-screen(320px){
+      max-width: 290px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     .ft_left{
       a{
         img{
           margin-bottom: 37px;
+          @include max-screen(768px){
+            margin-bottom: 19px;
+          }
         }
+      }
+      @include max-screen(428px){
+        text-align: center;
       }
       ul{
         display: flex;
         align-items: center;
+        justify-content: center;
         li{
           margin-right: 20px;
+          @include max-screen(428px){
+            margin: 0 10px;
+          }
         }
       }
     }
     .ft_right{
       display: flex;
+      @include max-screen(428px){
+        justify-content: space-between;
+      }
       ul{
         list-style: none;
+        @include max-screen(280px){
+          text-align: center;
+        }
         &:first-of-type{
           margin-right: 72px;
+          @include max-screen(428px){
+            margin-right: 15px;
+          }
         }
         li{
-          color: #FFF;
+          color: $white_color;
           font-size: 14px;
-          font-family: Roboto,sans-serif;
+          font-family: $main_font,sans-serif;
           line-height: 23.1px;
           margin-bottom: 12px;
+          @include max-screen(320px){
+            font-size: 12px;
+          }
           &:first-of-type{
             margin-bottom: 36px;
+            @include max-screen(768px){
+              margin-bottom: 18px;
+            }
           }
           &:last-of-type{
             margin-bottom: 16px;
           }
           a{
-            color: #FFF;
+            color: $white_color;
             font-size: 14px;
-            font-family: Roboto,sans-serif;
+            font-family: $main_font,sans-serif;
             line-height: 21px;
             text-decoration: none;
+            @include max-screen(320px){
+              font-size: 12px;
+            }
           }
         }
       }
     }
   }
   .copyright{
-    max-width: 1064px;
+    max-width: $max_width;
     margin: auto;
     display: flex;
     justify-content:center;
     padding-top: 4px;
+    @include max-screen(1024px){
+      max-width: 994px;
+    }
+    @include max-screen(992px){
+      max-width: 962px;
+    }
+    @include max-screen(834px){
+      max-width: 804px;
+    }
+    @include max-screen(820px){
+      max-width: 790px;
+    }
+    @include max-screen(800px){
+      max-width: 770px;
+    }
+    @include max-screen(768px){
+      max-width: 738px;
+    }
+    @include max-screen(414px){
+      max-width: 384px;
+    }
+    @include max-screen(390px){
+      max-width: 360px;
+    }
+    @include max-screen(375px){
+      max-width: 345px;
+    }
+    @include max-screen(360px){
+      max-width: 330px;
+    }
+    @include max-screen(320px){
+      max-width: 290px;
+    }
+    @include max-screen(280px){
+      max-width: 250px;
+    }
     p{
-      color: #FFF;
+      color: $white_color;
       text-align: center;
       font-size: 14px;
-      font-family: Roboto,sans-serif;
+      font-family: $main_font,sans-serif;
       line-height: 23.1px;
+      @include max-screen(320px){
+        font-size: 12px;
+      }
     }
   }
 }
