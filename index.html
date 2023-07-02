@@ -5,31 +5,38 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Thalby</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
 
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg" href="images/logo.svg">
+
 
 
 </head>
 <body>
 <header>
-    <div class="container">
+    <div class="header-wrapper container">
         <div class="nav">
-            <ul>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">Try a Free Guide</a></li>
-                <li><a href="#">Stories</a></li>
-            </ul>
+            <div class="nav__content">
+                <ul class="nav__list">
+                    <li class="nav__list-item active-nav"><a href="#" class="hover-target">Shop</a></li>
+                    <li class="nav__list-item"><a href="#" class="hover-target">Collections</a></li>
+                    <li class="nav__list-item"><a href="#" class="hover-target">Try a Free Guide</a></li>
+                    <li class="nav__list-item"><a href="#" class="hover-target">Stories</a></li>
+                </ul>
+            </div>
         </div>
-        <a href="#" class="logo">
-            <img src="images/logo.svg" alt="img">
-        </a>
+        <div class="logo-wrap">
+            <a href="#" class="logo">
+                <img src="images/logo.svg" alt="img">
+            </a>
+        </div>
         <div class="icons">
             <ul>
                 <li>
@@ -48,6 +55,13 @@
                     </a>
                 </li>
             </ul>
+        </div>
+        <div class="nav-but-wrap">
+            <div class="menu-icon hover-target">
+                <span class="menu-icon__line menu-icon__line-left"></span>
+                <span class="menu-icon__line"></span>
+                <span class="menu-icon__line menu-icon__line-right"></span>
+            </div>
         </div>
     </div>
 </header>
